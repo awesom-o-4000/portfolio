@@ -1,0 +1,60 @@
+/* ===================================
+   CSS VARIABLES - SINGLE SOURCE OF TRUTH
+   =================================== */
+
+:root {
+    /* ===== COLORS - Electric Blue Theme ===== */
+    --bg-color: #0a0a0a;
+    --text-main: #f0f0f0;
+    --text-muted: #6b7280;
+    --accent: #1a1a1a;
+    --vibe-color: #00d4ff;
+    --border-color: #2a2a2a;
+
+    /* ===== TYPOGRAPHY ===== */
+    --font-main: 'Inter', sans-serif;
+    --font-code: 'Space Mono', monospace;
+    --font-serif: 'Playfair Display', serif;
+
+    /* ===== SPACING ===== */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+
+    /* ===== LAYOUT ===== */
+    --max-width: 1600px;
+    --sidebar-width: 350px;
+    --navbar-height: 88px;
+    --filter-offset-desktop: 90px;
+    --filter-offset-mobile: 70px;
+
+    /* ===== BORDER RADIUS ===== */
+    --radius-sm: 4px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-full: 50%;
+
+    /* ===== TRANSITIONS ===== */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-carousel: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+    /* ===== SHADOWS ===== */
+    --shadow-sm: 0 0 15px rgba(255, 255, 255, 0.15);
+    --shadow-vibe: 0 0 20px rgba(0, 212, 255, 0.4);
+    --shadow-vibe-soft: 0 0 8px var(--vibe-color);
+
+    /* ===== Z-INDEX LAYERS ===== */
+    --z-base: 1;
+    --z-dropdown: 10;
+    --z-sticky: 90;
+    --z-navbar: 100;
+    --z-mobile-menu: 150;
+    --z-hamburger: 201;
+    --z-modal: 500;
+    --z-skip-link: 1000;
+}

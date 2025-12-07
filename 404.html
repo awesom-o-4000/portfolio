@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Ron Yahav</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .error-code {
+            font-family: var(--font-code);
+            font-size: 8rem;
+            color: var(--vibe-color);
+            margin: 0;
+            line-height: 1;
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: rgba(0, 212, 255, 0.9);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border: 1px solid var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem;
+            }
+
+            .error-message {
+                font-size: 1.5rem;
+            }
+
+            .error-actions {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-message">Page Not Found</h2>
+        <p class="error-description">
+            Oops! The page you're looking for doesn't exist. It might have been moved or deleted.
+        </p>
+        <div class="error-actions">
+            <a href="index.html" class="btn btn-primary">← Back to Portfolio</a>
+            <a href="about.html" class="btn btn-secondary">About Me</a>
+        </div>
+    </div>
+</body>
+
+</html>

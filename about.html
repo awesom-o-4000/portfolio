@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Ron Yahav - Creative Director & Product Designer</title>
+
+    <!-- Google Fonts: Inter for UI, Space Mono for Code/Vibe -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- 1. Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">RON YAHAV<span class="logo-dot">.</span></a>
+
+        <!-- Hamburger Icon for Mobile -->
+        <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Work</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="mailto:hello@ronyahav.com">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- 2. About Content -->
+    <section class="about-section">
+        <div class="about-header">
+            <h1>It's not just about pixels. <br>It's about <span class="code-tag">logic</span>.</h1>
+        </div>
+
+        <div class="about-content">
+            <p>
+                I'm a multidisciplinary designer based in <span class="highlight">Tel Aviv</span>, obsessing over the
+                intersection of brand identity and digital product design.
+            </p>
+            <p>
+                With a background in both <span class="highlight">visual arts</span> and <span
+                    class="highlight">frontend development</span>, I don't just design screens—I design systems. I
+                believe that the best products feel inevitable, as if they were always meant to exist exactly as they
+                are.
+            </p>
+            <p>
+                Currently, I'm exploring the world of <span class="code-tag">&lt;Vibe Coding /&gt;</span>, using AI to
+                rapid-prototype ideas that would previously take weeks to build.
+            </p>
+
+            <p style="margin-top: 3rem;">
+                <!-- Updated Link with class for fade effect -->
+                <a href="mailto:hello@ronyahav.com" class="cta-link">Let's build something together &rarr;</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ron Yahav.</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="js/main.js" defer></script>
+
+</body>
+
+</html>

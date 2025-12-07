@@ -1,1 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO & Meta Tags -->
+    <title>Ron Yahav | Creative Director & Product Designer</title>
+    <meta name="description"
+        content="Ron Yahav - Multidisciplinary designer specializing in brand identity, UI/UX design, and vibe-coded MVPs. Based in Tel Aviv.">
+    <meta name="author" content="Ron Yahav">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ronyahav.com/">
+    <meta property="og:title" content="Ron Yahav | Creative Director & Product Designer">
+    <meta property="og:description"
+        content="Multidisciplinary designer specializing in brand identity, UI/UX design, and vibe-coded MVPs.">
+    <meta property="og:image" content="assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Ron Yahav | Creative Director & Product Designer">
+    <meta property="twitter:description"
+        content="Multidisciplinary designer specializing in brand identity, UI/UX design, and vibe-coded MVPs.">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+    <!-- Google Fonts: Inter for UI, Space Mono for Code/Vibe -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- 1. Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="logo">RON YAHAV<span class="logo-dot">.</span></a>
+
+        <!-- Hamburger Icon for Mobile -->
+        <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html#work" class="active">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="mailto:hello@ronyahav.com">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <!-- 2. Hero Section -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Creative Director<br>
+                    & <span class="light-text">Product Designer</span>.
+                </h1>
+                <p class="hero-sub">
+                    Bridging aesthetic and logic. Crafting brands, interfaces,
+                    and <span class="highlight-code">vibe-coded</span> MVPs.
+                </p>
+            </div>
+        </header>
+
+        <!-- 3. Filter Section -->
+        <section class="filter-container" id="work" aria-label="Project Filters">
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all" aria-pressed="true"
+                    aria-label="Show all projects">All</button>
+                <button class="filter-btn" data-filter="product-design" aria-pressed="false"
+                    aria-label="Show product design projects">Product Design</button>
+                <button class="filter-btn" data-filter="gs-features" aria-pressed="false"
+                    aria-label="Show GS features">GS Features</button>
+                <button class="filter-btn" data-filter="video" aria-pressed="false"
+                    aria-label="Show video projects">Video</button>
+                <button class="filter-btn" data-filter="animation" aria-pressed="false"
+                    aria-label="Show animation projects">Animation</button>
+                <button class="filter-btn vibe-btn" data-filter="vibe-coding" aria-pressed="false"
+                    aria-label="Show vibe coding projects">&lt;Vibe Coding /&gt;</button>
+            </div>
+        </section>
+
+        <!-- 4. The Gallery Grid -->
+        <section class="gallery-grid" aria-label="Project Gallery">
+
+            <!-- PRODUCT DESIGN -->
+            <article class="project-card" data-category="product-design">
+                <a href="projects/dataseeds/index.html">
+                    <div class="image-wrapper">
+                        <img src="projects/dataseeds/assets/thumb.jpg" alt="DataSeeds.AI Thumbnail" width="600"
+                            height="450" loading="lazy"
+                            onerror="this.src='https://placehold.co/600x450/1a1a1a/FFF?text=DataSeeds.AI'">
+                    </div>
+                    <div class="card-info">
+                        <div class="tags">Product Design</div>
+                        <h3>DataSeeds.AI</h3>
+                    </div>
+                </a>
+            </article>
+
+            <article class="project-card" data-category="product-design">
+                <a href="projects/ai-art-master/index.html">
+                    <div class="image-wrapper">
+                        <img src="projects/ai-art-master/assets/thumb.jpg" alt="AI Art Master Thumbnail" width="600"
+                            height="450" loading="lazy"
+                            onerror="this.src='https://placehold.co/600x450/1a1a1a/FFF?text=AI+Art+Master'">
+                    </div>
+                    <div class="card-info">
+                        <div class="tags">Gamification</div>
+                        <h3>AI Art Master</h3>
+                    </div>
+                </a>
+            </article>
+
+            <article class="project-card" data-category="product-design">
+                <a href="projects/mic-drop/index.html">
+                    <div class="image-wrapper">
+                        <img src="projects/mic-drop/assets/thumb.jpg" alt="Mic Drop Thumbnail" width="600" height="450"
+                            loading="lazy" onerror="this.src='https://placehold.co/600x450/1a1a1a/FFF?text=Mic+Drop'">
+                    </div>
+                    <div class="card-info">
+                        <div class="tags">Product Idea</div>
+                        <h3>Mic Drop</h3>
+                    </div>
+                </a>
+            </article>
+
+            <article class="project-card" data-category="product-design">
+                <a href="projects/briefbee/index.html">
+                    <div class="image-wrapper">
+                        <img src="projects/briefbee/assets/thumb.jpg" alt="BriefBee Thumbnail" width="600" height="450"
+                            loading="lazy" onerror="this.src='https://placehold.co/600x450/1a1a1a/FFF?text=BriefBee'">
+                    </div>
+                    <div class="card-info">
+                        <div class="tags">Product Strategy</div>
+                        <h3>BriefBee</h3>
+                    </div>
+                </a>
+            </article>
+
+
+
+
+
+            <!-- GS FEATURES -->
+            <article class="project-card" data-category="gs-features">
+                <a href="projects/gs-duels/index.html">
+                    <div class="image-wrapper">
+                        <img src="projects/gs-duels/assets/thumb.jpg" alt="Duels Thumbnail" width="600" height="450"
+                            loading="lazy" onerror="this.src='https://placehold.co/600x450/1a1a1a/FFF?text=Duels'">
+                    </div>
+                    <div class="card-info">
+                        <div class="tags">Product Design</div>
+                        <h3>Duels</h3>
+                    </div>
+                </a>
+            </article>
+
+            <article class="project-card" data-category="gs-features">
+                <a href="projects/gs-missions/index.html">
+                    <div class="image-wrapper">
+                        <img src="projects/gs-missions/assets/thumb.jpg" alt="Missions Thumbnail" width="600"
+                            height="450" loading="lazy"
+                            onerror="this.src='https://placehold.co/600x450/1a1a1a/FFF?text=Missions'">
+                    </div>
+                    <div class="card-info">
+                        <div class="tags">GTM Strategy</div>
+                        <h3>Missions</h3>
+                    </div>
+                </a>
+            </article>
+
+            <article class="project-card" data-category="gs-features">
+                <a href="projects/gs-store/index.html">
+                    <div class="image-wrapper">
+                        <img src="projects/gs-store/assets/thumb.jpg" alt="Store Redesign Thumbnail" width="600"
+                            height="450" loading="lazy"
+                            onerror="this.src='https://placehold.co/600x450/1a1a1a/FFF?text=Store+Redesign'">
+                    </div>
+                    <div class="card-info">
+                        <div class="tags">UI/UX Design</div>
+                        <h3>Store Redesign</h3>
+                    </div>
+                </a>
+            </article>
+
+            <article class="project-card" data-category="gs-features">
+                <a href="projects/gs-onboarding/index.html">
+                    <div class="image-wrapper">
+                        <img src="projects/gs-onboarding/assets/thumb.jpg" alt="Onboarding Thumbnail" width="600"
+                            height="450" loading="lazy"
+                            onerror="this.src='https://placehold.co/600x450/1a1a1a/FFF?text=Onboarding'">
+                    </div>
+                    <div class="card-info">
+                        <div class="tags">UX Research</div>
+                        <h3>Onboarding</h3>
+                    </div>
+                </a>
+            </article>
+
+
+            <!-- VIDEO -->
+            <article class="project-card" data-category="video">
+                <a href="projects/gs-demos/index.html">
+                    <div class="image-wrapper">
+                        <img src="projects/gs-demos/assets/thumb.jpg" alt="GS Demos Thumbnail" width="600" height="450"
+                            loading="lazy" onerror="this.src='https://placehold.co/600x450/1a1a1a/FFF?text=GS+Demos'">
+                    </div>
+                    <div class="card-info">
+                        <div class="tags">Video Production</div>
+                        <h3>GS Demos</h3>
+                    </div>
+                </a>
+            </article>
+
+
+            <!-- ANIMATION -->
+            <article class="project-card" data-category="animation">
+                <a href="projects/micro-interactions/index.html">
+                    <div class="image-wrapper">
+                        <img src="projects/micro-interactions/assets/thumb.jpg" alt="Micro Interactions Thumbnail"
+                            width="600" height="450" loading="lazy"
+                            onerror="this.src='https://placehold.co/600x450/1a1a1a/FFF?text=Micro+Interactions'">
+                    </div>
+                    <div class="card-info">
+                        <div class="tags">Animation</div>
+                        <h3>Micro Interactions</h3>
+                    </div>
+                </a>
+            </article>
+
+            <!-- VIBE CODING -->
+            <article class="project-card is-vibe" data-category="vibe-coding">
+                <a href="projects/inkling/index.html">
+                    <div class="image-wrapper">
+                        <div class="live-badge">Live MVP</div>
+                        <img src="projects/inkling/assets/thumb.jpg" alt="Inkling Thumbnail" width="600" height="450"
+                            loading="lazy" onerror="this.src='https://placehold.co/600x450/1c5d6a/000?text=Inkling'">
+                    </div>
+                    <div class="card-info">
+                        <div class="tags code-font">Vibe Coding</div>
+                        <h3>Inkling</h3>
+                    </div>
+                </a>
+            </article>
+
+            <article class="project-card is-vibe" data-category="vibe-coding">
+                <a href="projects/daily-ai/index.html">
+                    <div class="image-wrapper">
+                        <div class="live-badge">Live Tool</div>
+                        <img src="projects/daily-ai/assets/thumb.jpg" alt="Daily.AI Thumbnail" width="600" height="450"
+                            loading="lazy" onerror="this.src='https://placehold.co/600x450/1c5d6a/000?text=Daily.AI'">
+                    </div>
+                    <div class="card-info">
+                        <div class="tags code-font">Vibe Coding</div>
+                        <h3>Daily.AI</h3>
+                    </div>
+                </a>
+            </article>
+
+            <article class="project-card is-vibe" data-category="vibe-coding">
+                <a href="projects/promptle/index.html">
+                    <div class="image-wrapper">
+                        <div class="live-badge">Game</div>
+                        <img src="projects/promptle/assets/thumb.jpg" alt="Promptle Thumbnail" width="600" height="450"
+                            loading="lazy" onerror="this.src='https://placehold.co/600x450/1c5d6a/000?text=Promptle'">
+                    </div>
+                    <div class="card-info">
+                        <div class="tags code-font">Vibe Coding</div>
+                        <h3>Promptle</h3>
+                    </div>
+                </a>
+            </article>
+
+            <article class="project-card is-vibe" data-category="vibe-coding">
+                <a href="projects/stickeroo/index.html">
+                    <div class="image-wrapper">
+                        <div class="live-badge">App</div>
+                        <img src="projects/stickeroo/assets/thumb.jpg" alt="Stickeroo.ai Thumbnail" width="600"
+                            height="450" loading="lazy"
+                            onerror="this.src='https://placehold.co/600x450/1c5d6a/000?text=Stickeroo.ai'">
+                    </div>
+                    <div class="card-info">
+                        <div class="tags code-font">Vibe Coding</div>
+                        <h3>Stickeroo.ai</h3>
+                    </div>
+                </a>
+            </article>
+
+            <article class="project-card is-vibe" data-category="vibe-coding">
+                <a href="projects/prompt-and-pixel/index.html">
+                    <div class="image-wrapper">
+                        <img src="projects/prompt-and-pixel/assets/thumb.jpg" alt="Prompt & Pixel Thumbnail" width="600"
+                            height="450" loading="lazy"
+                            onerror="this.src='https://placehold.co/600x450/1c5d6a/000?text=Prompt+%26+Pixel'">
+                    </div>
+                    <div class="card-info">
+                        <div class="tags code-font">Platform</div>
+                        <h3>Prompt & Pixel</h3>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Empty State Placeholder -->
+            <div class="empty-state" id="empty-state" role="status" aria-live="polite">
+                <p style="font-family: var(--font-code); font-size: 1.2rem; color: var(--vibe-color);">// 404: Vibe Not
+                    Found</p>
+                <span style="font-size: 0.9rem; opacity: 0.6">No projects match this filter yet. Check back soon for new
+                    work in this category.</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ron Yahav.</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="js/main.js" defer></script>
+
+</body>
+
+</html>
