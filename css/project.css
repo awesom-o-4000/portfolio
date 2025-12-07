@@ -153,8 +153,29 @@ ul {
 }
 
 .text-detail p {
-    color: #d1d1d1;
-    margin-bottom: 20px;
+    color: var(--text-main);
+    /* Increased contrast from #d1d1d1 */
+    margin-bottom: 24px;
+    font-size: 1.05rem;
+    /* Slightly larger */
+}
+
+.text-detail ul,
+.text-detail ol {
+    list-style-type: disc;
+    margin-bottom: 24px;
+    padding-left: 20px;
+}
+
+.text-detail li {
+    margin-bottom: 12px;
+    color: var(--text-main);
+    padding-left: 8px;
+    position: relative;
+}
+
+.text-detail li::marker {
+    color: var(--vibe-color);
 }
 
 /* Visual Assets Styling */
@@ -472,4 +493,37 @@ ul {
     .project-title {
         font-size: 3rem;
     }
+}
+
+/* --- PREVIEW TABS (Standardized to match Filters) --- */
+.preview-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid transparent;
+    color: var(--text-muted);
+    padding: 0.7rem 1.4rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+}
+
+.filter-btn.active {
+    background: var(--text-main);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
 }

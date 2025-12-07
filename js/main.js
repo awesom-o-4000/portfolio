@@ -106,11 +106,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 projectCards.forEach(card => {
                     const category = card.getAttribute('data-category');
-                    if (filterValue === 'all' || filterValue === category) {
+                    // Allow multiple categories separated by space
+                    if (filterValue === 'all' || category.includes(filterValue)) {
                         card.classList.remove('hidden');
                         visibleCount++;
+                        // Reset animation
                         card.style.opacity = '0';
-                        setTimeout(() => card.style.opacity = '1', 50);
+                        card.style.transform = 'translateY(10px)';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 50);
                     } else {
                         card.classList.add('hidden');
                     }
