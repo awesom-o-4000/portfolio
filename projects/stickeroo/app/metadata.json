@@ -1,0 +1,7 @@
+{
+  "name": "STICKEROO.AI",
+  "description": "Create custom 3D stickers based on your photos using Gemini AI.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

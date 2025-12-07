@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <script>
+    window.onerror = function (msg, url, line, col, error) {
+      var div = document.createElement("div");
+      div.style.cssText = "position:fixed; top:0; left:0; width:100%; height:auto; background:red; color:white; padding:10px; z-index:9999; font-size:14px; word-wrap:break-word;";
+      div.innerHTML = "JS Error: " + msg + "<br/>File: " + url + "<br/>Line: " + line;
+      document.body.appendChild(div);
+      return false;
+    };
+    window.addEventListener('unhandledrejection', function (event) {
+      var div = document.createElement("div");
+      div.style.cssText = "position:fixed; bottom:0; left:0; width:100%; height:auto; background:orange; color:white; padding:10px; z-index:9999;";
+      div.innerHTML = "Promise Error: " + event.reason;
+      document.body.appendChild(div);
+    });
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Inkling - AI Tattoo Designer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            ink: {
+              900: '#0a0a0a',
+              800: '#171717',
+              700: '#262626',
+              600: '#404040',
+            },
+            accent: {
+              500: '#5E26B9',
+              600: '#4a1d94',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Rajdhani', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #e5e5e5;
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
+      margin: 0;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    #root {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1,
+    h2,
+    h3,
+    .font-display {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 500;
+      /* Enforcing Medium 500 as requested */
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #171717;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #404040;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #525252;
+    }
+  </style>
+
+  <script type="module" crossorigin src="./assets/index-C1bEzNaA.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>

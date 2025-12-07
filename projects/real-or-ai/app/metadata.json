@@ -1,0 +1,7 @@
+{
+  "name": "Real or AI? - Cyberpunk Turing Test",
+  "description": "A cyberpunk-themed game to test human perception against generative AI. Features a Turing Test mode and a Glitch (Find the Difference) mode using Gemini 2.5.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

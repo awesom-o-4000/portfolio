@@ -1,0 +1,7 @@
+{
+  "name": "daily.ai",
+  "description": "An intelligent daily standup tool that cancels meetings if they aren't necessary based on team updates and AI analysis.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

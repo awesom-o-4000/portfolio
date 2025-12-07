@@ -1,0 +1,5 @@
+{
+  "name": "Promptle",
+  "description": "A Wordle-like game where you guess the 5-word prompt used to generate an AI image.",
+  "requestFramePermissions": []
+}

@@ -36,7 +36,20 @@
             <ul class="meta-list">
                 <li class="meta-item">
                     <span class="meta-label">Client</span>
-                    <span class="meta-value">Vibe Coding</span>
+                    <span class="meta-value">The Universe</span>
+                </li>
+                <li class="meta-item">
+                    <span class="meta-label">Website</span>
+                    <span class="meta-value"><a
+                            href="https://ai.studio/apps/drive/1rYO4KoAUyoVmD0HXjUUJ4qrSd0uNegu7?fullscreenApplet=true"
+                            target="_blank" rel="noopener noreferrer">View Live <svg xmlns="http://www.w3.org/2000/svg"
+                                width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                style="margin-left: 4px; vertical-align: middle; position: relative; top: -1px;">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg></a></span>
                 </li>
                 <li class="meta-item">
                     <span class="meta-label">Services</span>
@@ -44,11 +57,11 @@
                 </li>
                 <li class="meta-item">
                     <span class="meta-label">Year</span>
-                    <span class="meta-value">2024</span>
+                    <span class="meta-value">2025</span>
                 </li>
                 <li class="meta-item">
                     <span class="meta-label">Role</span>
-                    <span class="meta-value">Your Role</span>
+                    <span class="meta-value">Concept, Design, Development</span>
                 </li>
             </ul>
         </aside>
@@ -59,7 +72,7 @@
             <!-- Intro & Hero Image -->
             <section class="section">
                 <div class="visual-container">
-                    <img src="https://placehold.co/1600x900/1a1a1a/FFF?text=Hero+Image" alt="Project Hero"
+                    <img src="https://placehold.co/1600x900/1a1a1a/FFF?text=Inkling+App+Hero" alt="Project Hero"
                         class="visual-full">
                 </div>
                 <p class="intro-lead">
@@ -67,14 +80,81 @@
                 </p>
             </section>
 
+            <!-- Live App Embed -->
+            <section class="section">
+                <!-- Device Toggles -->
+                <div class="preview-tabs">
+                    <button onclick="setDevice('desktop')" class="filter-btn active" id="btn-desktop">Desktop</button>
+                    <button onclick="setDevice('mobile')" class="filter-btn" id="btn-mobile">Mobile</button>
+                </div>
+
+                <div id="app-container" class="visual-container"
+                    style="min-height: 850px; transition: max-width 0.3s ease; margin: 0 auto; width: 100%;">
+                    <!-- Updated ID and styles -->
+                    <iframe src="app/dist/index.html" style="width: 100%; height: 100%; border: none;"
+                        title="Live Demo">
+                    </iframe>
+                </div>
+            </section>
+
+            <script>
+                function setDevice(mode) {
+                    const container = document.getElementById('app-container');
+                    const btnDesktop = document.getElementById('btn-desktop');
+                    const btnMobile = document.getElementById('btn-mobile');
+
+                    if (mode === 'mobile') {
+                        container.style.maxWidth = '390px'; // iPhone width
+                        container.style.border = '1px solid #333';
+                        btnMobile.classList.add('active');
+                        btnDesktop.classList.remove('active');
+                    } else {
+                        container.style.maxWidth = '100%';
+                        container.style.border = 'none';
+                        btnDesktop.classList.add('active');
+                        btnMobile.classList.remove('active');
+                    }
+                }
+
+                function handleResize() {
+                    const toggles = document.querySelector('.device-toggles');
+                    if (window.innerWidth < 1000) {
+                        toggles.style.display = 'none';
+                        setDevice('desktop');
+                    } else {
+                        toggles.style.display = 'flex';
+                    }
+                }
+
+                window.addEventListener('resize', handleResize);
+                window.addEventListener('load', handleResize);
+                handleResize();
+            </script>
+
             <!-- Section 1 -->
             <section class="section">
                 <div class="text-detail">
-                    <h3><span class="num">01.</span> The Challenge</h3>
+                    <h3><span class="num">01.</span> Overview</h3>
                     <p>
-                        Describe the initial brief and the problems the client was facing. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Inkling is an AI tattoo ideation and generation tool that lets you preview the tattoo design
+                        directly on your body. Users can generate tattoos using AI or upload their own designs to
+                        visualize how they would look in reality. Designs are automatically added to the user's gallery
+                        for sharing and future reference.
                     </p>
+                </div>
+            </section>
+
+            <!-- Squared Images Feature -->
+            <section class="section">
+                <div class="two-column-grid">
+                    <div class="visual-container">
+                        <img src="https://placehold.co/800x800/1a1a1a/FFF?text=Tattoo+Ideation" alt="Tattoo Ideation"
+                            class="visual-square">
+                    </div>
+                    <div class="visual-container">
+                        <img src="https://placehold.co/800x800/1a1a1a/FFF?text=Body+Preview" alt="Body Preview"
+                            class="visual-square">
+                    </div>
                 </div>
             </section>
 
@@ -82,19 +162,19 @@
             <section class="section">
                 <div class="small-visuals-grid">
                     <div class="visual-container">
-                        <img src="https://placehold.co/400x400/1a1a1a/666?text=Icon+01" alt="Icon 1"
+                        <img src="https://placehold.co/400x400/1a1a1a/666?text=Icon+01+400x400" alt="Icon 1"
                             class="visual-square">
                     </div>
                     <div class="visual-container">
-                        <img src="https://placehold.co/400x400/1a1a1a/666?text=Icon+02" alt="Icon 2"
+                        <img src="https://placehold.co/400x400/1a1a1a/666?text=Icon+02+400x400" alt="Icon 2"
                             class="visual-square">
                     </div>
                     <div class="visual-container">
-                        <img src="https://placehold.co/400x400/1a1a1a/666?text=Icon+03" alt="Icon 3"
+                        <img src="https://placehold.co/400x400/1a1a1a/666?text=Icon+03+400x400" alt="Icon 3"
                             class="visual-square">
                     </div>
                     <div class="visual-container">
-                        <img src="https://placehold.co/400x400/1a1a1a/666?text=Icon+04" alt="Icon 4"
+                        <img src="https://placehold.co/400x400/1a1a1a/666?text=Icon+04+400x400" alt="Icon 4"
                             class="visual-square">
                     </div>
                 </div>
@@ -104,23 +184,13 @@
             <section class="section">
                 <div class="two-column-grid">
                     <div class="visual-container">
-                        <img src="https://placehold.co/800x600/1a1a1a/666?text=Image+Left" alt="Left Image"
+                        <img src="https://placehold.co/800x600/1a1a1a/666?text=Image+Left+800x600" alt="Left Image"
                             class="visual-full">
                     </div>
                     <div class="visual-container">
-                        <img src="https://placehold.co/800x600/1a1a1a/666?text=Image+Right" alt="Right Image"
+                        <img src="https://placehold.co/800x600/1a1a1a/666?text=Image+Right+800x600" alt="Right Image"
                             class="visual-full">
                     </div>
-                </div>
-            </section>
-
-            <!-- OPTION: Color Palette -->
-            <section class="section">
-                <div class="color-palette">
-                    <div class="color-swatch" style="background: #00d4ff;"></div>
-                    <div class="color-swatch" style="background: #1a1a1a;"></div>
-                    <div class="color-swatch" style="background: #ffffff;"></div>
-                    <div class="color-swatch" style="background: #888888;"></div>
                 </div>
             </section>
 
@@ -132,22 +202,22 @@
                             <!-- Slide 1 -->
                             <div class="carousel-slide" data-caption="Exploration 01 Description">
                                 <div class="visual-container">
-                                    <img src="https://placehold.co/1600x900/1a1a1a/FFF?text=Slide+01" alt="Slide 1"
-                                        class="visual-full">
+                                    <img src="https://placehold.co/1600x900/1a1a1a/FFF?text=Slide+01+1600x900"
+                                        alt="Slide 1" class="visual-full">
                                 </div>
                             </div>
                             <!-- Slide 2 -->
                             <div class="carousel-slide" data-caption="Exploration 02 Description">
                                 <div class="visual-container">
-                                    <img src="https://placehold.co/1600x900/222/FFF?text=Slide+02" alt="Slide 2"
-                                        class="visual-full">
+                                    <img src="https://placehold.co/1600x900/222/FFF?text=Slide+02+1600x900"
+                                        alt="Slide 2" class="visual-full">
                                 </div>
                             </div>
                             <!-- Slide 3 -->
                             <div class="carousel-slide" data-caption="Exploration 03 Description">
                                 <div class="visual-container">
-                                    <img src="https://placehold.co/1600x900/333/FFF?text=Slide+03" alt="Slide 3"
-                                        class="visual-full">
+                                    <img src="https://placehold.co/1600x900/333/FFF?text=Slide+03+1600x900"
+                                        alt="Slide 3" class="visual-full">
                                 </div>
                             </div>
                         </div>
@@ -173,19 +243,23 @@
                 </div>
 
                 <div class="text-detail">
-                    <h3><span class="num">02.</span> The Process</h3>
-                    <p>
-                        Explain your methodology. How did you arrive at the solution? Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit.
-                    </p>
+                    <h3><span class="num">02.</span> Key Features</h3>
+                    <ul>
+                        <li><strong>AI Generation:</strong> Create unique tattoo designs from text prompts.</li>
+                        <li><strong>Body Preview:</strong> Visualize tattoos on uploaded photos of your own body with
+                            realistic warping and blending.</li>
+                        <li><strong>Upload Custom Art:</strong> Test your own sketches or found images before committing
+                            to ink.</li>
+                        <li><strong>Gallery:</strong> Save and organize your generated designs and previews.</li>
+                    </ul>
                 </div>
             </section>
 
             <!-- Full Width Visual -->
             <section class="section">
                 <div class="visual-container">
-                    <img src="https://placehold.co/1600x900/1a1a1a/FFF?text=Large+Visual" alt="Large Visual Asset"
-                        class="visual-full">
+                    <img src="https://placehold.co/1600x900/1a1a1a/FFF?text=Inkling+Generation+Process"
+                        alt="Generation Process" class="visual-full">
                 </div>
             </section>
 
@@ -198,7 +272,7 @@
             <section class="section">
                 <div class="phone-grid">
                     <div class="phone-mockup">
-                        <img src="https://placehold.co/390x844/1a1a1a/666?text=Mobile+01" alt="App Screenshot">
+                        <img src="https://placehold.co/390x844/1a1a1a/666?text=Mobile+01+390x844" alt="App Screenshot">
                     </div>
                 </div>
             </section>
@@ -209,10 +283,10 @@
             <section class="section">
                 <div class="phone-grid-2">
                     <div class="phone-mockup">
-                        <img src="https://placehold.co/390x844/1a1a1a/666?text=Mobile+01" alt="Home Screen">
+                        <img src="https://placehold.co/390x844/1a1a1a/666?text=Mobile+01+390x844" alt="Home Screen">
                     </div>
                     <div class="phone-mockup">
-                        <img src="https://placehold.co/390x844/1a1a1a/666?text=Mobile+02" alt="Detail Screen">
+                        <img src="https://placehold.co/390x844/1a1a1a/666?text=Mobile+02+390x844" alt="Detail Screen">
                     </div>
                 </div>
             </section>
@@ -223,13 +297,13 @@
             <section class="section">
                 <div class="phone-grid-3">
                     <div class="phone-mockup">
-                        <img src="https://placehold.co/390x844/1a1a1a/666?text=Screen+01" alt="Screen 1">
+                        <img src="https://placehold.co/390x844/1a1a1a/666?text=Screen+01+390x844" alt="Screen 1">
                     </div>
                     <div class="phone-mockup">
-                        <img src="https://placehold.co/390x844/1a1a1a/666?text=Screen+02" alt="Screen 2">
+                        <img src="https://placehold.co/390x844/1a1a1a/666?text=Screen+02+390x844" alt="Screen 2">
                     </div>
                     <div class="phone-mockup">
-                        <img src="https://placehold.co/390x844/1a1a1a/666?text=Screen+03" alt="Screen 3">
+                        <img src="https://placehold.co/390x844/1a1a1a/666?text=Screen+03+390x844" alt="Screen 3">
                     </div>
                 </div>
             </section>
@@ -240,8 +314,8 @@
             <section class="section">
                 <div class="visual-container">
                     <!-- Replace with: <video src="assets/demo.mp4" class="visual-full" autoplay muted loop playsinline></video> -->
-                    <img src="https://placehold.co/1600x900/1a1a1a/00ff9d?text=Video+Preview" alt="Video Placeholder"
-                        class="visual-full">
+                    <img src="https://placehold.co/1600x900/1a1a1a/00ff9d?text=Video+Preview+1600x900"
+                        alt="Video Placeholder" class="visual-full">
                 </div>
             </section>
 
@@ -249,14 +323,17 @@
             <!-- Section 3 -->
             <section class="section">
                 <div class="text-detail">
-                    <h3><span class="num">03.</span> The Result</h3>
+                    <h3><span class="num">03.</span> The Challenges</h3>
                     <p>
-                        What was the outcome? Did you increase metrics? Did the brand launch successfully?
+                        The main technical challenges were achieving realistic <strong>tattoo styling</strong> during
+                        generation and ensuring the <strong>body preview</strong> looked natural. Overlaying a flat 2D
+                        image onto a 3D-implied surface (body part) while maintaining skin texture and lighting was
+                        critical for a useful preview.
                     </p>
                 </div>
                 <div class="visual-container">
                     <!-- Example Video Placeholder -->
-                    <img src="https://placehold.co/1600x900/000/FFF?text=Video+Placeholder" alt="Video Content"
+                    <img src="https://placehold.co/1600x900/000/FFF?text=Video+Placeholder+1600x900" alt="Video Content"
                         class="visual-full">
                 </div>
             </section>

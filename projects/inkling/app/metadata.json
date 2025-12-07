@@ -1,0 +1,7 @@
+{
+  "name": "Inkling",
+  "description": "Generate high-quality custom tattoo designs and virtually try them on your body using advanced AI composition.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

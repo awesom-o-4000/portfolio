@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REAL OR AI? | Ron Yahav Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="icon" type="image/png" href="../../favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400;1,400&family=Space+Mono:wght@400&display=swap"
+        rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/project.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- Sticky Sidebar Information -->
+        <aside class="sidebar">
+            <div>
+                <a href="../../index.html" class="nav-back">← Back to Index</a>
+                <h1 class="project-title">REAL OR AI?</h1>
+            </div>
+
+            <ul class="meta-list">
+                <li class="meta-item">
+                    <span class="meta-label">Client</span>
+                    <span class="meta-value">The Universe</span>
+                </li>
+                <li class="meta-item">
+                    <span class="meta-label">Website</span>
+                    <span class="meta-value"><a
+                            href="https://ai.studio/apps/drive/1JYesI4DOrBZ7wlkFB6IPtA9UZwqqJe5H?fullscreenApplet=true"
+                            target="_blank" rel="noopener noreferrer">View Live <svg xmlns="http://www.w3.org/2000/svg"
+                                width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                style="margin-left: 4px; vertical-align: middle; position: relative; top: -1px;">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg></a></span>
+                </li>
+                <li class="meta-item">
+                    <span class="meta-label">Services</span>
+                    <span class="meta-value">Vibe Coding / Game Design</span>
+                </li>
+                <li class="meta-item">
+                    <span class="meta-label">Year</span>
+                    <span class="meta-value">2025</span>
+                </li>
+                <li class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Concept, Design, Development</span>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Stream -->
+        <main class="content">
+
+            <!-- Intro & Hero Image -->
+            <section class="section">
+                <div class="visual-container">
+                    <img src="assets/thumb.jpg" alt="REAL OR AI? Hero" class="visual-full"
+                        onerror="this.src='https://placehold.co/1600x900/1a1a1a/FFF?text=REAL+OR+AI?+Hero'">
+                </div>
+                <p class="intro-lead">
+                    Test your visual intuition. Distinguish reality from synthesis in "Real or AI", or spot generated
+                    alterations in "Find the Difference".
+                </p>
+            </section>
+
+            <!-- Live App Embed -->
+            <section class="section">
+                <!-- Device Toggles -->
+                <div class="preview-tabs">
+                    <button onclick="setDevice('desktop')" class="filter-btn active" id="btn-desktop">Desktop</button>
+                    <button onclick="setDevice('mobile')" class="filter-btn" id="btn-mobile">Mobile</button>
+                </div>
+
+                <div id="app-container" class="visual-container"
+                    style="min-height: 850px; transition: max-width 0.3s ease; margin: 0 auto; width: 100%;">
+                    <iframe src="app/dist/index.html" style="width: 100%; height: 100%; border: none;"
+                        title="Live Demo">
+                    </iframe>
+                </div>
+            </section>
+
+            <script>
+                function setDevice(mode) {
+                    const container = document.getElementById('app-container');
+                    const btnDesktop = document.getElementById('btn-desktop');
+                    const btnMobile = document.getElementById('btn-mobile');
+
+                    if (mode === 'mobile') {
+                        container.style.maxWidth = '390px'; // iPhone width
+                        container.style.border = '1px solid #333';
+                        btnMobile.classList.add('active');
+                        btnDesktop.classList.remove('active');
+                    } else {
+                        container.style.maxWidth = '100%';
+                        container.style.border = 'none';
+                        btnDesktop.classList.add('active');
+                        btnMobile.classList.remove('active');
+                    }
+                }
+
+                // Auto-hide toggles on smaller screens
+                function checkScreenSize() {
+                    const toggles = document.querySelector('.device-toggles');
+                    if (window.innerWidth < 1000) {
+                        if (toggles) toggles.style.display = 'none';
+                    } else {
+                        if (toggles) toggles.style.display = 'flex';
+                    }
+                }
+
+                window.addEventListener('resize', checkScreenSize);
+                checkScreenSize(); // Initial check
+            </script>
+
+
+            <!-- Section 1 -->
+            <section class="section">
+                <div class="text-detail">
+                    <h3><span class="num">01.</span> Overview</h3>
+                    <p>
+                        "REAL OR AI?" is a dual-mode puzzle game designed to train your eye in the age of generative
+                        media.
+                        In the primary mode, users must distinguish between high-quality photography and AI synthesis.
+                        In "Find the Difference", the challenge shifts to identifying subtle AI manipulations within
+                        real scenes.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Squared Images Feature -->
+            <section class="section">
+                <div class="two-column-grid">
+                    <div class="visual-container">
+                        <img src="https://placehold.co/800x800/1a1a1a/FFF?text=Real+Photo" alt="Real Photo"
+                            class="visual-square">
+                    </div>
+                    <div class="visual-container">
+                        <img src="https://placehold.co/800x800/1a1a1a/FFF?text=AI+Synthesis" alt="AI Generated"
+                            class="visual-square">
+                    </div>
+                </div>
+            </section>
+
+            <!-- OPTION: Small Visuals Grid (Icons, Logos, etc.) -->
+            <section class="section">
+                <div class="small-visuals-grid">
+                    <div class="visual-container">
+                        <img src="https://placehold.co/400x400/1a1a1a/666?text=Mode+Icon" alt="Mode 1"
+                            class="visual-square">
+                    </div>
+                    <div class="visual-container">
+                        <img src="https://placehold.co/400x400/1a1a1a/666?text=Rank+badge" alt="Rank"
+                            class="visual-square">
+                    </div>
+                    <div class="visual-container">
+                        <img src="https://placehold.co/400x400/1a1a1a/666?text=Streak+Flame" alt="Streak"
+                            class="visual-square">
+                    </div>
+                    <div class="visual-container">
+                        <img src="https://placehold.co/400x400/1a1a1a/666?text=Eye+Icon" alt="Vision"
+                            class="visual-square">
+                    </div>
+                </div>
+            </section>
+
+            <!-- OPTION: Two Column Images -->
+            <section class="section">
+                <div class="two-column-grid">
+                    <div class="visual-container">
+                        <img src="https://placehold.co/800x600/1a1a1a/666?text=Comparison+UI+800x600" alt="UI Left"
+                            class="visual-full">
+                    </div>
+                    <div class="visual-container">
+                        <img src="https://placehold.co/800x600/1a1a1a/666?text=Analysis+Overlay+800x600" alt="UI Right"
+                            class="visual-full">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Carousel Section (Optional) -->
+            <section class="section">
+                <div class="carousel-wrapper" id="projectCarousel">
+                    <div class="carousel-viewport">
+                        <div class="carousel-track">
+                            <!-- Slide 1 -->
+                            <div class="carousel-slide" data-caption="Main Menu Interaction">
+                                <div class="visual-container">
+                                    <img src="https://placehold.co/1600x900/1a1a1a/FFF?text=Menu+Interface+1600x900"
+                                        alt="Slide 1" class="visual-full">
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="carousel-slide" data-caption="Image Analysis Tool">
+                                <div class="visual-container">
+                                    <img src="https://placehold.co/1600x900/222/FFF?text=Scanning+Effect+1600x900"
+                                        alt="Slide 2" class="visual-full">
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="carousel-slide" data-caption="Daily Challenge Result">
+                                <div class="visual-container">
+                                    <img src="https://placehold.co/1600x900/333/FFF?text=Score+Screen+1600x900"
+                                        alt="Slide 3" class="visual-full">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="carousel-progress-container">
+                        <div class="carousel-progress-bar"></div>
+                    </div>
+
+                    <!-- Navigation Controls -->
+                    <div class="carousel-nav">
+                        <div class="carousel-active-caption">Loading...</div>
+
+                        <div class="carousel-controls">
+                            <div class="carousel-counter">01 / 03</div>
+                            <div class="carousel-btn-group">
+                                <button class="carousel-btn prev-btn" aria-label="Previous Slide">←</button>
+                                <button class="carousel-btn next-btn" aria-label="Next Slide">→</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-detail">
+                    <h3><span class="num">02.</span> Key Features</h3>
+                    <ul>
+                        <li><strong>Dual Game Modes:</strong> Switch between "Real vs AI" authentication and "Find the
+                            Difference" alteration spotting.</li>
+                        <li><strong>Daily Challenges:</strong> A curated set of 5 pairs every day. Compete for the high
+                            score on the global leaderboard.</li>
+                        <li><strong>Upload & Verify:</strong> Users can upload their own photos to test the community's
+                            perception limits.</li>
+                        <li><strong>AI Inpainting:</strong> Advanced masking algorithms subtly alter user photos for the
+                            "Find the Difference" mode.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Full Width Visual -->
+            <section class="section">
+                <div class="visual-container">
+                    <img src="https://placehold.co/1600x900/1a1a1a/FFF?text=Generation+Pipeline" alt="Workflow Overview"
+                        class="visual-full">
+                </div>
+            </section>
+
+            <!-- Mobile Screenshots -->
+            <section class="section">
+                <div class="phone-grid-3">
+                    <div class="phone-mockup">
+                        <img src="https://placehold.co/390x844/1a1a1a/666?text=Vote+390x844" alt="Voting">
+                    </div>
+                    <div class="phone-mockup">
+                        <img src="https://placehold.co/390x844/1a1a1a/666?text=Result+390x844" alt="Results">
+                    </div>
+                    <div class="phone-mockup">
+                        <img src="https://placehold.co/390x844/1a1a1a/666?text=Profile+390x844" alt="User Profile">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="section">
+                <div class="text-detail">
+                    <h3><span class="num">03.</span> The Challenges</h3>
+                    <p>
+                        <strong>Image Generation:</strong> The core difficulty lay in generating "similar studios" for
+                        the comparison mode. We needed the AI to produce images that were stylistically close enough to
+                        real photos to be deceptive, without being obvious fakes.
+                    </p>
+                    <p>
+                        <strong>Masking & Inpainting:</strong> For the "Find the Difference" mode, the challenge was
+                        technically complex: developing a system to automatically identifying objects in user uploads,
+                        masking them out, and seamlessly generating new AI elements that blend perfectly with the
+                        original lighting and perspective.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Video Embed -->
+            <section class="section">
+                <div class="visual-container">
+                    <img src="https://placehold.co/1600x900/1a1a1a/00ff9d?text=Gameplay+Preview+1600x900"
+                        alt="Video Placeholder" class="visual-full">
+                </div>
+            </section>
+
+            <!-- Bottom Navigation -->
+            <div class="next-project">
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Next Project</span>
+                <a href="../roboslots/index.html" class="next-link">Next: RoboSlots →</a>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Global Footer -->
+    <footer>
+        <p>&copy; 2026 Ron Yahav.</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="../../js/carousel.js" defer></script>
+
+</body>
+
+</html>
